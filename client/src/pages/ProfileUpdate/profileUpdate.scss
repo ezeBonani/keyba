@@ -1,0 +1,85 @@
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+@import "../../responsive.scss";
+
+.profileUpdate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  //margin-top: 10px;
+  min-height: 85vh;
+  margin-bottom: 15px;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .avatar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  button {
+    padding: 7px;
+    margin-top: 10px;
+    background-color: $amarillo;
+    border: 1px solid black;
+    //border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  p {
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 50px;
+    background-color: $turquesa;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      input {
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .success {
+      color: green;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

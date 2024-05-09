@@ -1,0 +1,109 @@
+@import "../../responsive.scss";
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+.card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  max-width: 70vw;
+
+  @include md {
+    flex-direction: column;
+    height: 420px;
+    justify-content: space-evenly;
+    gap: 10px;
+    max-width: none;
+  }
+
+  .imageContainer {
+    flex: 2;
+    height: 200px;
+    max-width: 360px;
+
+    @include md {
+      flex: 0;
+      width: auto; //antes 320px
+      height: 180px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .textContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    @include md {
+      flex: 0;
+    }
+
+    img {
+      width: 17px;
+      height: 17px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #444;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #000;
+        scale: 1.01;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: #5b5a5a;
+
+      span {
+        padding: 0 5px;
+      }
+    }
+
+    .price {
+      font-size: 19px;
+      font-weight: bold;
+      padding: 5px;
+
+      .expenses {
+        margin-top: 2px;
+        font-size: 13px;
+        font-weight: normal;
+        color: #5b5a5a;
+      }
+    }
+
+    .features {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .feature {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+
+      span {
+        padding: 0 4px;
+      }
+    }
+  }
+}

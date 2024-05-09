@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+//--- each time a change is made in this file, run 'npx prisma db push' in console ---
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  username  String   @unique
+  password  String
+  admin     Boolean  @default(false)
+  avatar    String? //not required
+  createdAt DateTime @default(now())
+  Post      Post[] //store Post created by user
+}
+
+//estos datos van en las Cards en el front
+model Post {
+  id         String      @id @default(auto()) @map("_id") @db.ObjectId
+  title      String
+  images     String[]
+  address    String
+  city       String
+  price      Int
+  expenses   Int
+  rooms      Int
+  bathroom   Int
+  beds       Int
+  size       Int
+  latitude   String
+  longitude  String
+  type       Type
+  createdAt  DateTime    @default(now())
+  user       User        @relation(fields: [userId], references: [id]) //conection between post and user id
+  userId     String      @db.ObjectId
+  postDetail PostDetail?
+}
+
+enum Type {
+  casa
+  ph
+  depto
+}
+
+model PostDetail {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  pet         String?
+  pool        String?
+  laundry     String?
+  requisites  String?
+  post        Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId      String  @unique @db.ObjectId
+}

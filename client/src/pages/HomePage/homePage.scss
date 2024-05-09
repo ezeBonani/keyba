@@ -1,0 +1,138 @@
+@import "../../responsive.scss";
+
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+.home-page {
+  display: flex;
+  height: 80vh;
+  margin-bottom: 1.5rem;
+
+  @include md {
+    height: 100%;
+  }
+
+  @include sm {
+    height: 100%;
+  }
+
+  .text-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    z-index: 999;
+
+    @include md {
+      z-index: 1;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .wrapper {
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .img-tablet {
+        display: none;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      @include md {
+        padding: 0;
+        .img-tablet {
+          display: initial;
+          width: 100%;
+        }
+        h1 {
+          font-size: 2.6rem;
+        }
+      }
+
+      @include sm {
+        h1 {
+          font-size: 2.1rem;
+        }
+        p {
+          font-size: 0.85rem;
+        }
+        .img-tablet {
+          display: none;
+        }
+      }
+
+      .title-ciudad {
+        margin-top: 40px;
+        text-align: center;
+        @include md {
+          margin-top: 20px;
+        }
+      }
+
+      .menu-ciudad {
+        display: flex;
+        justify-content: space-around;
+        gap: 8px;
+
+        button {
+          //padding: 10px 25px;
+          //width: 240px;
+          flex: 1;
+          height: 40px;
+          font-size: 1rem;
+          cursor: pointer;
+          background-color: white;
+          border: 1px solid #676767;
+          color: black;
+          transition: all 0.4s ease;
+
+          &:hover {
+            background-color: $turquesa;
+            color: black;
+          }
+
+          @include sm {
+            width: 300px;
+            padding: 10px;
+          }
+        }
+
+        @include sm {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    }
+    @include lg {
+      flex: 2;
+    }
+    @include sm {
+      margin-top: 30px;
+    }
+  }
+
+  .img-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      height: 100%;
+      position: absolute;
+      right: 0%;
+    }
+  }
+}

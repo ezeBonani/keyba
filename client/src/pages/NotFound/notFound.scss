@@ -1,0 +1,20 @@
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: self-start;
+  justify-content: center;
+  margin: 30px auto 30px auto;
+  transition: all 0.4s ease;
+
+  a {
+    margin-top: 20px;
+    font-weight: bold;
+    &:hover {
+      color: $turquesa;
+    }
+  }
+}

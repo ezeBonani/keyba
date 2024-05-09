@@ -1,0 +1,89 @@
+@import "../../responsive.scss";
+
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+.contacto {
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  @include md {
+    margin-top: 10px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include md {
+      flex-direction: column;
+    }
+
+    .imagen {
+      flex: 1;
+      img {
+        height: auto;
+        width: 100%;
+        min-height: 320px;
+        object-fit: cover;
+        @include sm {
+          width: 100%;
+          min-height: auto;
+        }
+      }
+    }
+    .infoContacto {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      justify-content: space-around;
+
+      @include md {
+        gap: 20px;
+        padding: 5px;
+        width: 600px;
+      }
+
+      @include sm {
+        width: 100%;
+      }
+
+      h1 {
+        @include sm {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        line-height: 30px;
+        text-align: justify;
+        padding-right: 40px;
+
+        @include sm {
+          padding: 0px;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        line-height: 50px;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

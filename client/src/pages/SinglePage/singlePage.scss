@@ -1,0 +1,240 @@
+@import "../../responsive.scss";
+
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+.singlePage {
+  display: flex;
+  margin-bottom: 40px;
+  margin-top: 20px;
+
+  @include md {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details {
+    flex: 3;
+
+    @include md {
+      flex: 1;
+    }
+
+    .wrapper {
+      padding-right: 50px;
+
+      @include md {
+        padding: 0px;
+      }
+
+      .info {
+        margin-top: 30px;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h1 {
+              font-weight: 400;
+              font-size: 30px;
+              @include md {
+                font-size: 24px;
+              }
+            }
+            .address {
+              display: flex;
+              flex-direction: column;
+              color: #5b5a5a;
+
+              @include md {
+                font-size: 14px;
+              }
+
+              img {
+                width: 17px;
+                height: 17px;
+
+                @include md {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+            }
+            .price {
+              font-size: 21px;
+              font-weight: bold;
+              padding: 5px;
+
+              .expenses {
+                margin-top: 2px;
+                font-size: 13px;
+                font-weight: normal;
+                color: #5b5a5a;
+              }
+            }
+          }
+          .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+            padding: 0 5px;
+
+            @include md {
+              font-size: 14px;
+            }
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+
+              @include md {
+                width: 45px;
+                height: 45px;
+              }
+            }
+          }
+        }
+
+        .bottom {
+          .description {
+            margin-top: 20px;
+            text-align: justify;
+            line-height: 22px;
+            white-space: pre-line;
+          }
+          .user-actions {
+            margin: 40px 0px 20px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .update {
+              padding: 5px;
+              background-color: $turquesa;
+              border: 1px solid #676767;
+              transition: all 0.4s ease;
+              cursor: pointer;
+              &:hover {
+                background-color: white;
+                color: black;
+              }
+            }
+
+            .delete {
+              padding: 5px;
+              background-color: rgb(237, 28, 28);
+              color: white;
+              cursor: pointer;
+              border: 1px solid #676767;
+              transition: all 0.4s ease;
+              &:hover {
+                background-color: white;
+                color: red;
+                border-color: red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .features {
+    flex: 2;
+
+    @include md {
+      flex: 1;
+      width: 100%;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+
+      @include md {
+        padding: 0px;
+      }
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 0px 10px 0px;
+      }
+
+      .contactContainer {
+        //background-color: #e9e5e5;
+        border: 2px solid $turquesa;
+        border-radius: 6px;
+        padding: 5px 15px 15px 15px;
+      }
+
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 0px 10px;
+        font-size: 14px;
+      }
+
+      .sizes {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .size {
+          display: flex;
+
+          span {
+            padding: 0 6px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+
+      .share-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-color: white;
+        border: 1px solid #717171;
+        border-radius: 5px;
+        padding: 5px 0;
+        transition: all 0.4s ease;
+        background-color: white;
+
+        &:hover {
+          background-color: $turquesa;
+        }
+
+        img {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

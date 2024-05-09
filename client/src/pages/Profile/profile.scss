@@ -1,0 +1,87 @@
+@import "../../responsive.scss";
+
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+.profile {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  button {
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: $amarillo;
+    }
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+    height: 80vh;
+    overflow: scroll;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10px;
+      gap: 30px;
+
+      .logout {
+        width: 100px;
+        background-color: white;
+        border: 1px solid black;
+        font-weight: normal;
+        &:hover {
+          background-color: #999;
+        }
+      }
+
+      .userActions {
+        display: flex;
+        gap: 40px;
+        .newUser {
+          background-color: white;
+          width: fit-content;
+          &:hover {
+            background-color: $turquesa;
+          }
+        }
+      }
+
+      .avatar {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-left: 20px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

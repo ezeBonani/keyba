@@ -1,0 +1,172 @@
+@import "../../responsive.scss";
+
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+nav {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a.navlink {
+    transition: all 0.5s ease;
+    @include sm {
+      display: none;
+    }
+
+    &:hover {
+      color: $amarillo;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex: 3;
+    align-items: center;
+    gap: 3rem;
+
+    @include md {
+      gap: 2rem;
+    }
+  }
+  .right {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: flex-end;
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include sm {
+        flex-direction: column;
+        gap: 0px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+      }
+
+      a {
+        transition: all 0.5s ease;
+        cursor: pointer;
+        padding: 5px;
+        &:hover {
+          color: $turquesa;
+        }
+      }
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        gap: 3px;
+
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 10px;
+          margin: 0;
+        }
+
+        span {
+          @include sm {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .navlink {
+      margin-right: 10px;
+    }
+
+    .menuIcon {
+      background-color: white;
+      padding: 5px;
+      border-radius: 10px;
+      display: none;
+
+      img {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      @include sm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      //right: -70%;+
+      right: 0;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 1.4rem;
+      background-color: rgb(137, 210, 220);
+      color: white;
+      height: 100vh;
+      width: 0;
+      padding-top: 40px;
+      //height: 100vh;+
+      //width: 70%;+
+      //display: none;+
+      transition: all 0.5s ease-out;
+      z-index: 999;
+
+      a {
+        text-wrap: nowrap;
+        display: none;
+      }
+
+      img {
+        display: none;
+        width: 100px;
+        height: 100px;
+      }
+
+      @include sm {
+        display: flex;
+      }
+
+      &.active {
+        a,
+        img {
+          display: flex;
+        }
+        @include sm {
+          //right: 0;+
+          height: 100vh;
+          width: 100%;
+        }
+      }
+
+      /* @include sm {+
+        a {
+          display: initial;
+        }
+      } */
+    }
+  }
+}
+
+.logo {
+  height: 6rem;
+  width: 6rem;
+}

@@ -1,0 +1,11 @@
+@import "../../responsive.scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include sm {
+    gap: 40px;
+  }
+}

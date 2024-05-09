@@ -1,0 +1,126 @@
+@import "../../responsive.scss";
+
+$amarillo: rgb(238, 230, 13);
+$turquesa: rgb(137, 210, 220);
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    label {
+      font-size: 12px;
+    }
+
+    .citySelector {
+      border: 1px solid #676767;
+      font-size: 13px;
+      font-weight: normal;
+      border-radius: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+
+      .select__placeholder {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+      }
+
+      .select__menu {
+        border: 1px solid #676767;
+      }
+
+      .select__option {
+        &:hover {
+          background-color: $turquesa;
+        }
+      }
+
+      .select__control--is-focused {
+        border-color: black;
+        box-shadow: none;
+      }
+    }
+
+    input,
+    select {
+      width: 12vw;
+      padding: 10px;
+      border: 1px solid #676767;
+      border-radius: 5px;
+      font-size: 13px;
+
+      &:focus {
+        outline: auto;
+        border: 1px solid black;
+      }
+
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+
+  .top {
+    input {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  .bottom {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    @include sm {
+      flex-direction: column;
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+
+        label {
+          padding-right: 10px;
+          text-wrap: nowrap;
+        }
+      }
+    }
+
+    button {
+      margin-top: 7px;
+      width: 60px;
+      padding: 10px;
+      border: 1px solid #999;
+      cursor: pointer;
+      background-color: $amarillo;
+      transition: all 0.4s ease;
+
+      @include sm {
+        width: 100%;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        background-color: $turquesa;
+      }
+    }
+  }
+}
