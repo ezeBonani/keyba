@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import "./updatePost.scss";
 import { useState } from "react";
 import UploadWidget from "../../components/UploadWidget/UploadWidget";
@@ -249,6 +249,7 @@ export default function UpdatePost() {
             <button className="sendButton">Actualizar publicación</button>
             {error && <span>error</span>}
           </form>
+          <Link to={`/${post.id}`}>Volver</Link>
         </div>
       </div>
     </div>

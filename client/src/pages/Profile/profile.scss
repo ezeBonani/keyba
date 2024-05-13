@@ -10,20 +10,24 @@ $turquesa: rgb(137, 210, 220);
 
   button {
     padding: 5px 10px;
-    background-color: white;
+    background-color: $amarillo;
     border: 1px solid black;
     font-size: 13px;
     cursor: pointer;
     transition: all 0.4s ease;
 
     &:hover {
-      background-color: $amarillo;
+      background-color: $turquesa;
     }
   }
 
   h1 {
     font-size: 26px;
     font-weight: 400;
+
+    @include sm {
+      font-size: 22px;
+    }
   }
 
   .wrapper {
@@ -45,16 +49,21 @@ $turquesa: rgb(137, 210, 220);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-left: 10px;
+      margin-left: 40px;
       gap: 30px;
+
+      @include sm {
+        margin: 0 auto;
+      }
 
       .logout {
         width: 100px;
-        background-color: white;
+        background-color: #999;
         border: 1px solid black;
         font-weight: normal;
         &:hover {
-          background-color: #999;
+          background-color: #676767;
+          color: white;
         }
       }
 
@@ -62,11 +71,7 @@ $turquesa: rgb(137, 210, 220);
         display: flex;
         gap: 40px;
         .newUser {
-          background-color: white;
           width: fit-content;
-          &:hover {
-            background-color: $turquesa;
-          }
         }
       }
 
@@ -82,6 +87,11 @@ $turquesa: rgb(137, 210, 220);
           object-fit: cover;
         }
       }
+    }
+
+    i {
+      color: green;
+      margin-left: 10px;
     }
   }
 }

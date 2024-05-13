@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./newPost.scss";
 import apiRequest from "../../lib/apiRequest";
 import UploadWidget from "../../components/UploadWidget/UploadWidget";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function NewPost() {
   const [error, setError] = useState("");
@@ -198,6 +198,7 @@ export default function NewPost() {
             <button className="sendButton">Crear publicación</button>
           </form>
           {error && <p className="error">{error}</p>}
+          <Link to={"/profile"}>Volver</Link>
         </div>
       </div>
     </div>
