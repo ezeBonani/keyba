@@ -4,7 +4,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Pin from "../pin/Pin";
 
-export default function Map({ items }) {
+export default function Map({ items, zoom }) {
   return (
     <>
       <MapContainer
@@ -13,7 +13,7 @@ export default function Map({ items }) {
             ? [items[0].latitude, items[0].longitude]
             : ["-34.606", "-58.48"]
         }
-        zoom={12.2}
+        zoom={zoom}
         scrollWheelZoom={true}
         className="map"
       >

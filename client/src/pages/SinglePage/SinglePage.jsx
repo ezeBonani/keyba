@@ -66,10 +66,9 @@ export default function SinglePage() {
             </div>
             <div className="bottom">
               <div className="description">{post.postDetail.description}</div>
-              {currentUser === null ? (
-                <></>
-              ) : currentUser.id !== post.userId ? (
-                currentUser.admin === true && (
+              {console.log(post.userId, currentUser.id)}
+              {currentUser &&
+                (currentUser.admin || currentUser.id === post.userId) && (
                   <div className="user-actions">
                     <button className="update" onClick={handleUpdate}>
                       Modificar Publicación
@@ -82,21 +81,7 @@ export default function SinglePage() {
                       Eliminar Publicación
                     </button>
                   </div>
-                )
-              ) : (
-                <div className="user-actions">
-                  <button className="update" onClick={handleUpdate}>
-                    Modificar Publicación
-                  </button>
-                  <button
-                    className="delete"
-                    onClick={handleDelete}
-                    disabled={loading}
-                  >
-                    Eliminar Publicación
-                  </button>
-                </div>
-              )}
+                )}
             </div>
           </div>
         </div>
@@ -149,7 +134,7 @@ export default function SinglePage() {
           </div>
           <p className="title">Mapa</p>
           <div className="mapContainer">
-            <Map items={[post]} />
+            <Map items={[post]} zoom={15} />
           </div>
           <button className="share-btn">
             Compartir publicación
