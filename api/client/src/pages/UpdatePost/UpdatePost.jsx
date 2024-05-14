@@ -8,7 +8,6 @@ export default function UpdatePost() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const post = useLoaderData();
-  console.log(post);
 
   const [images, setImages] = useState(post.images);
 
