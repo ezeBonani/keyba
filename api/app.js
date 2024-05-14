@@ -25,8 +25,6 @@ app.use("/api/user", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/mail", mailRoute);
 
-//console.log(path.join(__dirname, "/client/dist"));
-
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {

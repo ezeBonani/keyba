@@ -37,7 +37,6 @@ export default function SinglePage() {
 
   return (
     <div className="singlePage">
-      {console.log(currentUser === true ? "verdadero" : "falso")}
       <div className="details">
         <div className="wrapper">
           <Slider images={post.images} />
@@ -66,7 +65,6 @@ export default function SinglePage() {
             </div>
             <div className="bottom">
               <div className="description">{post.postDetail.description}</div>
-              {console.log(post.userId, currentUser.id)}
               {currentUser &&
                 (currentUser.admin || currentUser.id === post.userId) && (
                   <div className="user-actions">

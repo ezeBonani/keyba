@@ -2,10 +2,16 @@
 import { Link } from "react-router-dom";
 import "./pin.scss";
 import { Marker, Popup } from "react-leaflet";
+import { icon } from "leaflet";
+
+const ICON = icon({
+  iconUrl: "/gps-mark.png",
+  iconSize: [36, 36],
+});
 
 export default function Pin({ item }) {
   return (
-    <Marker position={[item.latitude, item.longitude]}>
+    <Marker position={[item.latitude, item.longitude]} icon={ICON}>
       <Popup>
         <div className="popupContainer">
           <img src={item.images[0]} alt="item-img" />
