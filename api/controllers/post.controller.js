@@ -3,7 +3,7 @@ import prisma from "../lib/prisma.js";
 export const getPosts = async (req, res) => {
   const query = req.query;
   let cities;
-  console.log(query);
+
   if (req.query.cities) {
     cities = req.query.cities.split("-");
   }
