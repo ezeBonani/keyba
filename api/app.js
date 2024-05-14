@@ -12,7 +12,12 @@ const app = express();
 const __dirname = path.resolve();
 
 app.use(cookieParser()); //middleware para las cookies
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true })); //middleware para los CORS
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    credentials: true,
+  })
+); //middleware para los CORS
 app.use(express.json()); //middleware para gestionar data json
 
 app.use("/api/auth", authRoute);
