@@ -10,14 +10,14 @@ $turquesa: rgb(137, 210, 220);
 
   button {
     padding: 5px 10px;
-    background-color: $amarillo;
+    background-color: $turquesa;
     border: 1px solid black;
     font-size: 13px;
     cursor: pointer;
     transition: all 0.4s ease;
 
     &:hover {
-      background-color: $turquesa;
+      background-color: $amarillo;
     }
   }
 

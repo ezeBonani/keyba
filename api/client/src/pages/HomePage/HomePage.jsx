@@ -21,9 +21,6 @@ export default function HomePage() {
             <button onClick={() => navigate(`/list?search=caba`)}>
               <span>Buenos Aires</span>
             </button>
-            <button onClick={() => navigate(`/list?search=gessel`)}>
-              <span>Villa Gessel</span>
-            </button>
             <button onClick={() => navigate(`/list?search=madrid`)}>
               <span>Madrid</span>
             </button>

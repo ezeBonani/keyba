@@ -44,7 +44,7 @@ $turquesa: rgb(137, 210, 220);
       padding: 13px 20px;
       border: none;
       cursor: pointer;
-      background-color: $amarillo;
+      background-color: $turquesa;
       transition: all 0.4s ease;
 
       img {
@@ -53,7 +53,7 @@ $turquesa: rgb(137, 210, 220);
       }
 
       &:hover {
-        background-color: $turquesa;
+        background-color: $amarillo;
       }
     }
   }

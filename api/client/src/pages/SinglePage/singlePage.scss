@@ -126,7 +126,7 @@ $turquesa: rgb(137, 210, 220);
               transition: all 0.4s ease;
               cursor: pointer;
               &:hover {
-                background-color: white;
+                background-color: $amarillo;
                 color: black;
               }
             }

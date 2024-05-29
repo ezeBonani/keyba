@@ -5,12 +5,19 @@ import { Link } from "react-router-dom";
 export default function Card({ item }) {
   return (
     <div className="card">
-      <Link to={`/${item.id}`} className="imageContainer">
+      <Link
+        to={`/${item.id}`}
+        className="imageContainer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src={item.images[0]} alt={item.title} />
       </Link>
       <div className="textContainer">
         <h2 className="title">
-          <Link to={`/${item.id}`}>{item.title}</Link>
+          <Link to={`/${item.id}`} target="_blank" rel="noopener noreferrer">
+            {item.title}
+          </Link>
         </h2>
         <div className="address">
           <div className="street">
