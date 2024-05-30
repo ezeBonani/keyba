@@ -28,7 +28,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className="img-container">
-        <img src="/depto3.jpg" alt="depto" />
+        <img src="/foto-portada.jpg" alt="portada" />
       </div>
     </div>
   );
