@@ -135,10 +135,12 @@ export default function SinglePage() {
             <Map items={[post]} zoom={15} />
           </div>
           <a
-            href={`whatsapp://send?text=${window.location}`}
+            /* href={`whatsapp://send?text=${window.location}`}
             data-action="share/whatsapp/share"
             target="_blank"
             rel="noopener noreferrer"
+             */
+            href="/"
             className="share-btn"
           >
             <img src="/share.png" alt="share" className="icon" />{" "}
