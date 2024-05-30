@@ -3,7 +3,7 @@ import Slider from "../../components/slider/Slider";
 import "./singlePage.scss";
 import Map from "../../components/map/Map";
 import ContactForm from "../../components/contactForm/ContactForm";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
@@ -134,10 +134,16 @@ export default function SinglePage() {
           <div className="mapContainer">
             <Map items={[post]} zoom={15} />
           </div>
-          <button className="share-btn">
-            Compartir publicación
-            <img src="/share.png" alt="share" className="icon" />
-          </button>
+          <a
+            href={`whatsapp://send?text=${window.location}`}
+            data-action="share/whatsapp/share"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="share-btn"
+          >
+            <img src="/share.png" alt="share" className="icon" />{" "}
+            <span>Compartir publicación</span>
+          </a>
         </div>
       </div>
     </div>
