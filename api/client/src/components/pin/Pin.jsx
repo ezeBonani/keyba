@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "./pin.scss";
-import { Marker, Popup } from "react-leaflet";
+import { Marker, Popup, Circle } from "react-leaflet";
 import { icon } from "leaflet";
 
 const ICON = icon({
@@ -12,6 +12,7 @@ const ICON = icon({
 export default function Pin({ item }) {
   return (
     <Marker position={[item.latitude, item.longitude]} icon={ICON}>
+      <Circle center={[item.latitude, item.longitude]} radius={100} />
       <Popup>
         <div className="popupContainer">
           <img src={item.images[0]} alt="item-img" />
