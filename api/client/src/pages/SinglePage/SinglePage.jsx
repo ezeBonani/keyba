@@ -109,20 +109,20 @@ export default function SinglePage() {
           </div>
           <p className="title">Dimensiones</p>
           <div className="sizes">
-            <div className="size">
-              <img src="/puerta.png" alt="rooms" />
+            <div className="rooms">
+              <img src="/puerta.png" alt="rooms" className="icon" />
               <span>{post.rooms} amb</span>
             </div>
-            <div className="size">
-              <img src="/bath.png" alt="bath" />
+            <div className="bath">
+              <img src="/bath.png" alt="bath" className="icon" />
               <span>{post.bathroom} baño/s</span>
             </div>
-            <div className="size">
-              <img src="/bed.png" alt="bed" />
+            <div className="bed">
+              <img src="/bed.png" alt="bed" className="icon" />
               <span>{post.beds} cama/s</span>
             </div>
             <div className="size">
-              <img src="/m2.png" alt="size" />
+              <img src="/m2.png" alt="size" className="icon" />
               <span>{post.size} m2</span>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function SinglePage() {
           </div>
           <button className="share-btn">
             Compartir publicación
-            <img src="/share.png" alt="share" />
+            <img src="/share.png" alt="share" className="icon" />
           </button>
         </div>
       </div>
