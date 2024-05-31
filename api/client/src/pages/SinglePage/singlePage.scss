@@ -189,9 +189,20 @@ $turquesa: rgb(137, 210, 220);
       .listVertical {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 10px;
         padding: 0px 10px;
         font-size: 14px;
+
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          img {
+            width: 22px;
+            height: 22px;
+          }
+        }
       }
 
       .sizes {

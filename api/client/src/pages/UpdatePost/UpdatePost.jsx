@@ -37,8 +37,51 @@ export default function UpdatePost() {
           description: inputs.description,
           pet: inputs.pet,
           pool: inputs.pool,
-          laundry: inputs.laundry,
           requisites: inputs.requisites,
+          hotWater: inputs.hotWater,
+          airConditioner: inputs.airConditioner,
+          extraPillows: inputs.extraPillows,
+          ovenPlate: inputs.ovenPlate,
+          bathtub: inputs.bathtub,
+          bidet: inputs.bidet,
+          coffeeMaker: inputs.coffeeMaker,
+          coffee: inputs.coffee,
+          safe: inputs.safe,
+          heating: inputs.heating,
+          kitchen: inputs.kitchen,
+          ethernet: inputs.ethernet,
+          freezer: inputs.freezer,
+          glassWine: inputs.glassWine,
+          exteriorShower: inputs.exteriorShower,
+          clothingStorage: inputs.clothingStorage,
+          parking: inputs.parking,
+          frigobar: inputs.frigobar,
+          showerGel: inputs.showerGel,
+          refrigerator: inputs.refrigerator,
+          oven: inputs.oven,
+          nearLaundry: inputs.nearLaundry,
+          washingMachine: inputs.washingMachine,
+          diningTable: inputs.diningTable,
+          microwave: inputs.microwave,
+          yard: inputs.yard,
+          balcony: inputs.balcony,
+          electricKettle: inputs.electricKettle,
+          hangers: inputs.hangers,
+          iron: inputs.iron,
+          cleaningProducts: inputs.cleaningProducts,
+          linens: inputs.linens,
+          dropLuggage: inputs.dropLuggage,
+          earlyArrivalLateDeparture: inputs.earlyArrivalLateDeparture,
+          soapToiletPaper: inputs.soapToiletPaper,
+          shampoo: inputs.shampoo,
+          diningChair: inputs.diningChair,
+          tv: inputs.tv,
+          toaster: inputs.toaster,
+          tender: inputs.tender,
+          pansPots: inputs.pansPots,
+          cutleryPlates: inputs.cutleryPlates,
+          wifi: inputs.wifi,
+          workSpace: inputs.workSpace,
         },
       });
       navigate("/" + res.data.id);
@@ -80,6 +123,7 @@ export default function UpdatePost() {
                 id="title"
                 name="title"
                 defaultValue={post.title}
+                required
               />
             </div>
 
@@ -90,6 +134,7 @@ export default function UpdatePost() {
                 id="address"
                 name="address"
                 defaultValue={post.address}
+                required
               />
             </div>
 
@@ -101,6 +146,7 @@ export default function UpdatePost() {
                 name="price"
                 min={0}
                 defaultValue={post.price}
+                required
               />
             </div>
 
@@ -112,6 +158,7 @@ export default function UpdatePost() {
                 name="expenses"
                 min={0}
                 defaultValue={post.expenses}
+                required
               />
             </div>
 
@@ -122,6 +169,7 @@ export default function UpdatePost() {
                 name="city"
                 type="text"
                 defaultValue={post.city}
+                required
               />
             </div>
 
@@ -134,6 +182,7 @@ export default function UpdatePost() {
                 type="number"
                 placeholder="m2"
                 defaultValue={post.size}
+                required
               />
             </div>
 
@@ -146,6 +195,7 @@ export default function UpdatePost() {
                 type="number"
                 placeholder="cantidad"
                 defaultValue={post.rooms}
+                required
               />
             </div>
 
@@ -158,6 +208,7 @@ export default function UpdatePost() {
                 type="number"
                 placeholder="cantidad"
                 defaultValue={post.beds}
+                required
               />
             </div>
 
@@ -168,6 +219,8 @@ export default function UpdatePost() {
                 name="latitude"
                 type="text"
                 defaultValue={post.latitude}
+                required
+                placeholder="-34.603708"
               />
             </div>
 
@@ -178,6 +231,8 @@ export default function UpdatePost() {
                 name="longitude"
                 type="text"
                 defaultValue={post.longitude}
+                required
+                placeholder="-58.381288"
               />
             </div>
 
@@ -190,6 +245,7 @@ export default function UpdatePost() {
                 type="number"
                 placeholder="cantidad"
                 defaultValue={post.bathroom}
+                required
               />
             </div>
 
@@ -200,6 +256,7 @@ export default function UpdatePost() {
                 id="requisites"
                 name="requisites"
                 defaultValue={post.postDetail.requisites}
+                required
               />
             </div>
 
@@ -209,6 +266,7 @@ export default function UpdatePost() {
                 name="description"
                 id="description"
                 defaultValue={post.postDetail.description}
+                required
               ></textarea>
             </div>
 
@@ -224,8 +282,8 @@ export default function UpdatePost() {
             <div className="item">
               <label htmlFor="pet">Mascotas</label>
               <select name="pet" defaultValue={post.postDetail.pet}>
-                <option value="Permitido">Si</option>
-                <option value="No Permitido">No</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
               </select>
             </div>
 
@@ -238,8 +296,404 @@ export default function UpdatePost() {
             </div>
 
             <div className="item">
-              <label htmlFor="laundry">Laundry</label>
-              <select name="laundry" defaultValue={post.postDetail.laundry}>
+              <label htmlFor="hotWater">Agua Caliente</label>
+              <select name="hotWater" defaultValue={post.postDetail.hotWater}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="airConditioner">Aire Acondicionado</label>
+              <select
+                name="airConditioner"
+                defaultValue={post.postDetail.airConditioner}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="extraPillows">Sábanas y almohadas extras</label>
+              <select
+                name="extraPillows"
+                defaultValue={post.postDetail.extraPillows}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="ovenPlate">Bandeja de horno</label>
+              <select name="ovenPlate" defaultValue={post.postDetail.ovenPlate}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="bathtub">Bañera</label>
+              <select name="bathtub" defaultValue={post.postDetail.bathtub}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="bidet">Bidet</label>
+              <select name="bidet" defaultValue={post.postDetail.bidet}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="coffeeMaker">Cafetera</label>
+              <select
+                name="coffeeMaker"
+                defaultValue={post.postDetail.coffeeMaker}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="coffee">Café</label>
+              <select name="coffee" defaultValue={post.postDetail.coffee}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="safe">Caja Fuerte</label>
+              <select name="safe" defaultValue={post.postDetail.safe}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="heating">Calefacción</label>
+              <select name="heating" defaultValue={post.postDetail.heating}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="kitchen">Cocina</label>
+              <select name="kitchen" defaultValue={post.postDetail.kitchen}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="ethernet">Conexión Ethernet</label>
+              <select name="ethernet" defaultValue={post.postDetail.ethernet}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="freezer">Freezer</label>
+              <select name="freezer" defaultValue={post.postDetail.freezer}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="glassWine">Copas de vino</label>
+              <select name="glassWine" defaultValue={post.postDetail.glassWine}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="exteriorShower">Ducha de Exterior</label>
+              <select
+                name="exteriorShower"
+                defaultValue={post.postDetail.exteriorShower}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="clothingStorage">
+                Espacio de guardado de ropa
+              </label>
+              <select
+                name="clothingStorage"
+                defaultValue={post.postDetail.clothingStorage}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="parking">Estacionamiento propio</label>
+              <select name="parking" defaultValue={post.postDetail.parking}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="frigobar">Frigobar</label>
+              <select name="frigobar" defaultValue={post.postDetail.frigobar}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="showerGel">Gel de ducha</label>
+              <select name="showerGel" defaultValue={post.postDetail.showerGel}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="refrigerator">Heladera</label>
+              <select
+                name="refrigerator"
+                defaultValue={post.postDetail.refrigerator}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="oven">Horno</label>
+              <select name="oven" defaultValue={post.postDetail.oven}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="nearLaundry">Servicio de laundry cercano</label>
+              <select
+                name="nearLaundry"
+                defaultValue={post.postDetail.nearLaundry}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="washingMachine">Lavarropas</label>
+              <select
+                name="washingMachine"
+                defaultValue={post.postDetail.washingMachine}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="diningTable">Mesa de comedor</label>
+              <select
+                name="diningTable"
+                defaultValue={post.postDetail.diningTable}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="microwave">Microondas</label>
+              <select name="microwave" defaultValue={post.postDetail.microwave}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="yard">Patio</label>
+              <select name="yard" defaultValue={post.postDetail.yard}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="balcony">Balcón</label>
+              <select name="balcony" defaultValue={post.postDetail.balcony}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="electricKettle">Pava eléctrica</label>
+              <select
+                name="electricKettle"
+                defaultValue={post.postDetail.electricKettle}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="hangers">Perchas</label>
+              <select name="hangers" defaultValue={post.postDetail.hangers}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="iron">Plancha</label>
+              <select name="iron" defaultValue={post.postDetail.iron}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="cleaningProducts">Productos de limpieza</label>
+              <select
+                name="cleaningProducts"
+                defaultValue={post.postDetail.cleaningProducts}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="linens">Ropa de cama</label>
+              <select name="linens" defaultValue={post.postDetail.linens}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="dropLuggage">Se permite dejar el equipaje</label>
+              <select
+                name="dropLuggage"
+                defaultValue={post.postDetail.dropLuggage}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="earlyArrivalLateDeparture">
+                Opción de llegar temprano o salir tarde
+              </label>
+              <select
+                name="earlyArrivalLateDeparture"
+                defaultValue={post.postDetail.earlyArrivalLateDeparture}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="soapToiletPaper">Amenities de baño</label>
+              <select
+                name="soapToiletPaper"
+                defaultValue={post.postDetail.soapToiletPaper}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="shampoo">Shampoo</label>
+              <select name="shampoo" defaultValue={post.postDetail.shampoo}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="diningChair">Sillas en comedor</label>
+              <select
+                name="diningChair"
+                defaultValue={post.postDetail.diningChair}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="tv">Televisión</label>
+              <select name="tv" defaultValue={post.postDetail.tv}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="toaster">Tostadora</label>
+              <select name="toaster" defaultValue={post.postDetail.toaster}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="tender">Tender para ropa</label>
+              <select name="tender" defaultValue={post.postDetail.tender}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="panPots">Ollas y sartenes</label>
+              <select name="panPots" defaultValue={post.postDetail.pansPots}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="cutleryPlates">Platos y cubiertos</label>
+              <select
+                name="cutleryPlates"
+                defaultValue={post.postDetail.cutleryPlates}
+              >
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="wifi">Wifi</label>
+              <select name="wifi" defaultValue={post.postDetail.wifi}>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="item">
+              <label htmlFor="workSpace">Zona de trabajo</label>
+              <select name="workSpace" defaultValue={post.postDetail.workSpace}>
                 <option value="Si">Si</option>
                 <option value="No">No</option>
               </select>

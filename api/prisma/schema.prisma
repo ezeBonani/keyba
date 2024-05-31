@@ -4,7 +4,7 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
-//--- each time a change is made in this file, run 'npx prisma db push' in console ---
+//--- Each time a change is made in this file, run 'npx prisma db push' in console ---
 
 generator client {
   provider = "prisma-client-js"
@@ -59,8 +59,53 @@ model PostDetail {
   description String
   pet         String?
   pool        String?
-  laundry     String?
-  requisites  String?
-  post        Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
-  postId      String  @unique @db.ObjectId
+
+  hotWater                  String?
+  airConditioner            String?
+  extraPillows              String?
+  ovenPlate                 String?
+  bathtub                   String?
+  bidet                     String?
+  coffeeMaker               String?
+  coffee                    String?
+  safe                      String?
+  heating                   String?
+  kitchen                   String?
+  ethernet                  String?
+  freezer                   String?
+  glassWine                 String?
+  exteriorShower            String?
+  clothingStorage           String?
+  parking                   String?
+  frigobar                  String?
+  showerGel                 String?
+  refrigerator              String?
+  oven                      String?
+  nearLaundry               String?
+  washingMachine            String?
+  diningTable               String?
+  microwave                 String?
+  yard                      String?
+  balcony                   String?
+  electricKettle            String?
+  hangers                   String?
+  iron                      String?
+  cleaningProducts          String?
+  linens                    String?
+  dropLuggage               String?
+  earlyArrivalLateDeparture String?
+  soapToiletPaper           String?
+  shampoo                   String?
+  diningChair               String?
+  tv                        String?
+  toaster                   String?
+  tender                    String?
+  pansPots                  String?
+  cutleryPlates             String?
+  wifi                      String?
+  workSpace                 String?
+
+  requisites String?
+  post       Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId     String  @unique @db.ObjectId
 }
