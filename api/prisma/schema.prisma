@@ -56,7 +56,7 @@ enum Type {
 
 model PostDetail {
   id                        String  @id @default(auto()) @map("_id") @db.ObjectId
-  description               String
+  description               String?
   pet                       String?
   pool                      String?
   hotWater                  String?
