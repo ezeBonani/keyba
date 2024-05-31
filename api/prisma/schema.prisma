@@ -55,11 +55,10 @@ enum Type {
 }
 
 model PostDetail {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  description String
-  pet         String?
-  pool        String?
-
+  id                        String  @id @default(auto()) @map("_id") @db.ObjectId
+  description               String
+  pet                       String?
+  pool                      String?
   hotWater                  String?
   airConditioner            String?
   extraPillows              String?
@@ -104,8 +103,7 @@ model PostDetail {
   cutleryPlates             String?
   wifi                      String?
   workSpace                 String?
-
-  requisites String?
-  post       Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
-  postId     String  @unique @db.ObjectId
+  requisites                String?
+  post                      Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId                    String  @unique @db.ObjectId
 }
