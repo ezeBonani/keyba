@@ -60,7 +60,7 @@ export default function HomePage() {
           showNav={false}
           showFullscreenButton={false}
           showPlayButton={false}
-          slideInterval={10000}
+          slideInterval={12000}
           slideDuration={1000}
         />
       </div>
