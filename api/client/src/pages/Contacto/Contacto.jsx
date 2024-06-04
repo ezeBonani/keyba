@@ -5,7 +5,7 @@ export default function Contacto() {
     <div className="contacto">
       <div className="wrapper">
         <div className="imagen">
-          <img src="/contacto.jpg" alt="contacto" />
+          <img src="/contacto.webp" alt="contacto" />
         </div>
         <div className="infoContacto">
           <h1>Para nosotros, brindar una buena comunicación es primordial</h1>

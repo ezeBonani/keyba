@@ -5,7 +5,7 @@ export default function SobreNosotros() {
     <div className="sobreNosotros">
       <div className="wrapper">
         <div className="imagen">
-          <img src="/workgroup.jpg" alt="workgroup" />
+          <img src="/workgroup.webp" alt="workgroup" />
         </div>
         <div className="infoSobreNosotros">
           <div className="title">

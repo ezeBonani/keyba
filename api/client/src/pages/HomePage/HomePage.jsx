@@ -9,21 +9,24 @@ export default function HomePage() {
 
   const images = [
     {
-      original: "/foto-portada-1.jpg",
+      original: "/foto-portada-1.webp",
       thumbnail: "",
       originalHeight: "550px",
     },
     {
-      original: "/foto-portada-2.jpg",
+      original: "/foto-portada-2.webp",
       thumbnail: "",
       originalHeight: "550px",
-      loading: "lazy",
     },
     {
-      original: "/foto-portada-3.jpg",
+      original: "/foto-portada-3.webp",
       thumbnail: "",
       originalHeight: "550px",
-      loading: "lazy",
+    },
+    {
+      original: "/foto-portada-4.webp",
+      thumbnail: "",
+      originalHeight: "550px",
     },
   ];
 
@@ -31,7 +34,7 @@ export default function HomePage() {
     <div className="home-page">
       <div className="text-container">
         <div className="wrapper">
-          <img src="/depto.jpg" alt="imgTablet" className="img-tablet" />
+          <img src="/depto.webp" alt="imgTablet" className="img-tablet" />
           <h1 className="title">Encontrá el lugar perfecto para vos</h1>
           <p>
             Nos especializamos en ofrecer las mejores opciones de alquiler para
