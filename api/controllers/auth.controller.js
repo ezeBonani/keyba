@@ -128,6 +128,7 @@ export const resetPassword = async (req, res, next) => {
     });
     req.newPassword = newPassword;
     req.email = email;
+    req.username = user.username;
     next();
   } catch (error) {
     console.log(error);
