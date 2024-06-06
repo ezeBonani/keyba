@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "./login.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import apiRequest from "../../lib/apiRequest";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -64,6 +64,10 @@ export default function Login() {
         </form>
       </div>
       <p>* Esta sección es sólo para los anfitriones de KEYBA *</p>
+      <span>
+        Si olvidaste tu password tendrás que reiniciarla clikeando{" "}
+        <Link to="/reset-password">acá</Link>{" "}
+      </span>
     </div>
   );
 }

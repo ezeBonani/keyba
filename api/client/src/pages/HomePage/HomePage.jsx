@@ -31,39 +31,44 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="home-page">
-      <div className="text-container">
-        <div className="wrapper">
-          <img src="/depto.webp" alt="imgTablet" className="img-tablet" />
-          <h1 className="title">Encontrá el lugar perfecto para vos</h1>
-          <p>
-            Nos especializamos en ofrecer las mejores opciones de alquiler para
-            que puedas encontrar el lugar que estás buscando.
-          </p>
-          <SearchBar />
-          <h4 className="title-ciudad">Elegí que ciudad</h4>
-          <div className="menu-ciudad">
-            <button onClick={() => navigate(`/list?search=caba`)}>
-              <span>Buenos Aires</span>
-            </button>
-            <button onClick={() => navigate(`/list?search=madrid`)}>
-              <span>Madrid</span>
-            </button>
+    <>
+      <div className="home-page">
+        <div className="text-container">
+          <div className="wrapper">
+            <img src="/depto.webp" alt="imgTablet" className="img-tablet" />
+            <h1 className="title">Encontrá el lugar perfecto para vos</h1>
+            <p>
+              Nos especializamos en ofrecer las mejores opciones de alquiler
+              para que puedas encontrar el lugar que estás buscando.
+            </p>
+            <SearchBar />
+            <h4 className="title-ciudad">Elegí que ciudad</h4>
+            <div className="menu-ciudad">
+              <button onClick={() => navigate(`/list?search=caba`)}>
+                <span>Buenos Aires</span>
+              </button>
+              <button onClick={() => navigate(`/list?search=madrid`)}>
+                <span>Madrid</span>
+              </button>
+            </div>
           </div>
         </div>
+        <div className="img-container">
+          {/* <img src="/foto-portada.jpg" alt="portada" /> */}
+          <ImageGallery
+            items={images}
+            autoPlay={true}
+            showNav={false}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            slideInterval={12000}
+            slideDuration={1000}
+          />
+        </div>
       </div>
-      <div className="img-container">
-        {/* <img src="/foto-portada.jpg" alt="portada" /> */}
-        <ImageGallery
-          items={images}
-          autoPlay={true}
-          showNav={false}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          slideInterval={12000}
-          slideDuration={1000}
-        />
-      </div>
-    </div>
+      <footer>
+        Website creado por ezeBonani - {new Date().getFullYear()} &reg;
+      </footer>
+    </>
   );
 }

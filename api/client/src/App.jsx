@@ -20,6 +20,7 @@ import {
 import NotFound from "./pages/NotFound/NotFound";
 import ProfileError from "./pages/ProfileError/ProfileError";
 import UpdatePost from "./pages/UpdatePost/UpdatePost";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
 
 function App() {
   const router = createBrowserRouter([
@@ -54,6 +55,10 @@ function App() {
         {
           path: "/login",
           element: <Login />,
+        },
+        {
+          path: "/reset-password",
+          element: <ResetPassword />,
         },
         {
           path: "*",

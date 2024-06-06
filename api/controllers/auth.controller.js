@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import prisma from "../lib/prisma.js";
 import jwt from "jsonwebtoken";
 import { jwtDecode } from "jwt-decode";
+import transporter from "../lib/nodemailer.js";
 
 export const register = async (req, res) => {
   const { username, email, password } = req.body;
@@ -104,3 +105,46 @@ export const login = async (req, res) => {
 export const logout = (req, res) => {
   res.clearCookie("token").status(200).json({ message: "Logout success!" });
 };
+
+export const resetPassword = async (req, res, next) => {
+  const { email } = req.body;
+
+  try {
+    const user = await prisma.user.findUnique({ where: { email } });
+
+    if (!user) {
+      return res.status(401).json({ message: "Invalid email" });
+    }
+
+    const newPassword = generatePass();
+    const newHashPassword = await bcrypt.hash(newPassword, 10);
+    console.log(user, newPassword);
+
+    const updatedUser = await prisma.user.update({
+      where: { email },
+      data: {
+        password: newHashPassword,
+      },
+    });
+    req.newPassword = newPassword;
+    req.email = email;
+    next();
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Failed to change password", err: error });
+  }
+};
+
+function generatePass() {
+  let pass = "";
+  let str =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz0123456789!$#=";
+
+  for (let i = 1; i <= 6; i++) {
+    let char = Math.floor(Math.random() * str.length + 1);
+
+    pass += str.charAt(char);
+  }
+
+  return pass;
+}
