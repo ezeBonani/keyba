@@ -118,7 +118,6 @@ export const resetPassword = async (req, res, next) => {
 
     const newPassword = generatePass();
     const newHashPassword = await bcrypt.hash(newPassword, 10);
-    console.log(user, newPassword);
 
     const updatedUser = await prisma.user.update({
       where: { email },
