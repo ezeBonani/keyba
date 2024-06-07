@@ -67,7 +67,17 @@ export default function ContactForm({ postTitle }) {
             required
           ></textarea>
         </div>
-        <button disabled={loading}>{loading ? "Enviando..." : "Enviar"}</button>
+        <button className="boton" disabled={loading}>
+          {loading ? "Enviando..." : "Enviar formulario"}
+        </button>
+        <a
+          className="boton whatsapp"
+          href={`https://wa.me/5491141883994?text=Hola%21%0D%0ATengo+interés+en+la+propiedad+*${postTitle}*+publicada+en+el+sitio+web+de+KeyBa`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="/whatsapp.png" /> Contactar vía Whatsapp
+        </a>
       </form>
       {success && <p className="success">Mensaje enviado exitosamente!</p>}
       {error && <p className="error">No se ha podido enviar el mensaje!</p>}
