@@ -7,6 +7,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
+import GoogleMaps from "../../components/googleMaps/GoogleMaps";
 
 export default function SinglePage() {
   const { currentUser } = useContext(AuthContext);
@@ -428,7 +429,8 @@ export default function SinglePage() {
           </div>
           <p className="title">Mapa</p>
           <div className="mapContainer">
-            <Map items={[post]} zoom={15} />
+            {/* <Map items={[post]} zoom={15} /> */}
+            <GoogleMaps items={[post]} zoom={16} />
           </div>
           <a
             href={`whatsapp://send?text=${window.location}`}

@@ -1,3 +1,4 @@
+// PIN del mapa LEAFLET (en desuso actualmente)
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "./pin.scss";

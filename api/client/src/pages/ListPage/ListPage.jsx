@@ -4,6 +4,7 @@ import Filter from "../../components/filter/Filter";
 import Card from "../../components/card/Card";
 import Map from "../../components/map/Map";
 import { useLoaderData } from "react-router-dom";
+import GoogleMaps from "../../components/googleMaps/GoogleMaps";
 
 export default function ListPage() {
   const data = useLoaderData();
@@ -24,7 +25,8 @@ export default function ListPage() {
         </div>
       </div>
       <div className="map-container">
-        <Map items={data} zoom={12} />
+        {/* <Map items={data} zoom={12} /> */}
+        <GoogleMaps items={data} zoom={12} />
       </div>
     </div>
   );
