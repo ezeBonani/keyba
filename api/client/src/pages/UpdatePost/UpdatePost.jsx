@@ -97,8 +97,8 @@ export default function UpdatePost() {
         <h1>Actualizar Publicación</h1>
         <UploadWidget
           uwConfig={{
-            cloudName: "ezebonani",
-            uploadPreset: "keyba_test",
+            cloudName: import.meta.env.VITE_CLOUDINARY_CLOUDNAME,
+            uploadPreset: import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET,
             multiple: true,
             maxImageFileSize: 2000000,
             folder: "posts",

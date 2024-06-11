@@ -60,8 +60,8 @@ export default function ProfileUpdate() {
         />
         <UploadWidget
           uwConfig={{
-            cloudName: "ezebonani",
-            uploadPreset: "keyba_test",
+            cloudName: import.meta.env.VITE_CLOUDINARY_CLOUDNAME,
+            uploadPreset: import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET,
             multiple: false,
             maxImageFileSize: 2000000,
             folder: "avatars",

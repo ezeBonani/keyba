@@ -5,8 +5,8 @@ export const sendMail = async (req, res) => {
   try {
     // send mail with defined transport object
     const info = await transporter.sendMail({
-      from: '"Eze Bonani" <eze.bonani@gmail.com>', // sender address
-      to: `eze.bonani@gmail.com, ${email}`, // list of receivers
+      from: '"KeyBA reservas" <kbareservas@gmail.com>', // sender address
+      to: `kbareservas@gmail.com,eze.bonani@gmail.com, ${email}`, // list of receivers
       subject: `Consulta por ${post}`, // Subject line
       html: `¡Gracias por comunicarte con KEYBA! <br></br><br></br>Tu consulta por la propiedad <b>${post}</b> ha sido enviada. Estarás recibiendo una respuesta en las próximas 24 hrs hábiles<br><br/><br><br/><i>Nombre: ${name}<br></br>Teléfono: ${phone}<br></br>email: ${email}<br></br>Publicación: ${post}<br></br>Consulta: ${message}</i></p>`,
     });
