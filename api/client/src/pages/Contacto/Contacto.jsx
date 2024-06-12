@@ -17,13 +17,13 @@ export default function Contacto() {
             <li>
               <img src="/email.png" alt="email" />
               <span>
-                email: <b>xxx@gmail.com</b>
+                email: <b>kbareservas@gmail.com</b>
               </span>
             </li>
             <li>
               <img src="/phone.png" alt="phone" />
               <span>
-                teléfono: <b>+54 11 xxx</b>
+                teléfono: <b>+54 11 41883994</b>
               </span>
             </li>
           </ul>

@@ -10,6 +10,7 @@ export const register = async (req, res) => {
   //chequeo via token quien hace el registro de nuevo usuario
   //si es un usuario no administrador lo bloqueo, solo pueden crear nuevos usuarios el/los administradores
   //el seteo de administrador solo se hace desde la base de datos MongoDB
+
   const token = req.cookies.token;
   if (token !== undefined) {
     if (jwtDecode(token).admin === false) {
