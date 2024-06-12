@@ -66,6 +66,11 @@ export default function SinglePage() {
             </div>
             <div className="bottom">
               <div className="description">{post.postDetail.description}</div>
+              <p className="title">Mapa</p>
+              <div className="mapContainer">
+                {/* <Map items={[post]} zoom={15} /> */}
+                <GoogleMaps items={[post]} zoom={16} />
+              </div>
               {currentUser &&
                 (currentUser.admin || currentUser.id === post.userId) && (
                   <div className="user-actions">
@@ -426,11 +431,6 @@ export default function SinglePage() {
           <p className="title">Requisitos de alquiler</p>
           <div className="listVertical">
             <p className="requisites">{post.postDetail.requisites}</p>
-          </div>
-          <p className="title">Mapa</p>
-          <div className="mapContainer">
-            {/* <Map items={[post]} zoom={15} /> */}
-            <GoogleMaps items={[post]} zoom={16} />
           </div>
           <a
             href={`whatsapp://send?text=${window.location}`}

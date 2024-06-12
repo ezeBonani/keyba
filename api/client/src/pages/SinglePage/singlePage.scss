@@ -107,6 +107,18 @@ $turquesa: rgb(137, 210, 220);
         }
 
         .bottom {
+          .mapContainer {
+            width: 100%;
+            height: 260px;
+            margin-bottom: 10px;
+          }
+
+          .title {
+            font-weight: bold;
+            font-size: 16px;
+            padding: 25px 0px 15px 0px;
+          }
+
           .description {
             margin-top: 20px;
             text-align: justify;
@@ -176,7 +188,7 @@ $turquesa: rgb(137, 210, 220);
       .title {
         font-weight: bold;
         font-size: 16px;
-        padding: 10px 0px 10px 0px;
+        padding: 15px 0px 15px 0px;
       }
 
       .contactContainer {
@@ -220,12 +232,6 @@ $turquesa: rgb(137, 210, 220);
         }
       }
 
-      .mapContainer {
-        width: 100%;
-        height: 230px;
-        margin-bottom: 10px;
-      }
-
       .share-btn {
         display: flex;
         justify-content: center;
@@ -239,6 +245,7 @@ $turquesa: rgb(137, 210, 220);
         background-color: white;
         gap: 10px;
         font-size: 0.9rem;
+        margin-top: 10px;
 
         &:hover {
           background-color: $turquesa;
