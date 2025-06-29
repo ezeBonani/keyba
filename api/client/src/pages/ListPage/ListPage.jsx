@@ -25,8 +25,8 @@ export default function ListPage() {
         </div>
       </div>
       <div className="map-container">
-        {/* <Map items={data} zoom={12} /> */}
-        <GoogleMaps items={data} zoom={12} />
+        <Map items={data} zoom={12} />
+        {/* <GoogleMaps items={data} zoom={12} /> */}
       </div>
     </div>
   );

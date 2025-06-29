@@ -1,4 +1,4 @@
-// LEATLET MAP (no esta en uso actualmente)
+// LEATLET MAP
 /* eslint-disable react/prop-types */
 import "./map.scss";
 import { MapContainer, TileLayer } from "react-leaflet";

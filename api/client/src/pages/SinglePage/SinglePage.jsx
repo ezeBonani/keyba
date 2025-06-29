@@ -68,8 +68,8 @@ export default function SinglePage() {
               <div className="description">{post.postDetail.description}</div>
               <p className="title">Mapa</p>
               <div className="mapContainer">
-                {/* <Map items={[post]} zoom={15} /> */}
-                <GoogleMaps items={[post]} zoom={16} />
+                <Map items={[post]} zoom={15} />
+                {/*  <GoogleMaps items={[post]} zoom={16} /> */}
               </div>
               {currentUser &&
                 (currentUser.admin || currentUser.id === post.userId) && (
